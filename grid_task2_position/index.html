@@ -10,16 +10,14 @@
     <title>Position</title>
 
     <style>
-        * {
-            border: 1px solid purple;
-        }
 
         .container {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: 10% 1fr 1fr 1fr 10%;
-            gap: 10px;
-            height: 90vh;
+            grid-template-rows: 10% 1fr 1fr 1fr 20%;
+            gap: 5px;
+            height: 98vh;
+            text-align: center;
         }
 
         .header {
@@ -29,12 +27,22 @@
         }
 
         .main {
-            background-color: #FFDAB9;
-            grid-column: 1/9;
-            grid-row: 2/3;
+            display: contents;
         }
 
-        .content1, .content2, .content3 {
+        .mainsection {
+            display: contents;
+        }
+
+        .content {
+            grid-column: 1/9;
+            grid-row: 2/5;
+            background-color: #FFDAB9;
+        }
+
+        .content1,
+        .content2,
+        .content3 {
             background-color: pink;
         }
 
@@ -60,12 +68,14 @@
         }
 
         .footer {
-            background-color: #B0C4DE;
-            
             display: contents;
-            /* grid-template-columns: subgrid;
-            grid-template-rows: subgrid;
-            justify-items: center; */
+        }
+
+        .footer1,
+        .footer2,
+        .footer3,
+        .footer4 {
+            background-color: #B0C4DE;
         }
 
         .footer1 {
@@ -94,28 +104,43 @@
 <body>
     <div class="container">
         <header class="header">
-            <h2> Шапка </h2>
+            <h2> Шапка страницы </h2>
         </header>
-        <div class="main">
-            <h2> Основная часть </h2>
-        </div>
-        <div class="content1">
-            <h2> Еще 1</h2>
-        </div>
-        <div class="content2">
-            <h2> Еще 2</h2>
-        </div>
-        <div class="content3">
-            <h2> Еще 3</h2>
-        </div>
-        <aside class="sidebar">
-            <h2> Боковая область </h2>
-        </aside>
+
+        <main class="main">
+            <section class="mainsection">
+                <div class="content">
+                    <h2> Основная часть </h2>
+                </div>
+                <div class="content1">
+                    <h2> Еще 1 </h2>
+                </div>
+                <div class="content2">
+                    <h2> Еще 2 </h2>
+                </div>
+                <div class="content3">
+                    <h2> Еще 3 </h2>
+                </div>
+            </section>
+
+            <aside class="sidebar">
+                <h2> Боковая область </h2>
+            </aside>
+        </main>
+
         <footer class="footer">
-            <div class="footer1"> Секция 1</div>
-            <div class="footer2"> Секция 2</div>
-            <div class="footer3"> Секция 3</div>
-            <div class="footer4"> Секция 4</div>
+            <div class="footer1">
+                <h2> Секция футера 1 </h2>
+            </div>
+            <div class="footer2">
+                <h2> Секция футера 2 </h2>
+            </div>
+            <div class="footer3">
+                <h2> Секция футера 3 </h2>
+            </div>
+            <div class="footer4">
+                <h2> Секция футера 4 </h2>
+            </div>
         </footer>
     </div>
 
