@@ -1,57 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style/normalize.css">
     <title>Promogroup</title>
+
+    <style>
+        * {
+            border: 1px solid skyblue;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url("assets/fonts/montserrat-semi-bold.ttf");
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 5% repeat(4, 1fr) 5%;
+            grid-template-rows: 17% 1fr 12%;
+        }
+
+        .header {
+            display: grid;
+            grid-area: 1/2/2/6;
+            grid-template-columns: 1fr 1fr;
+            align-content: center;
+        }
+
+        .header__logo {
+            width: 38%;
+        }
+
+        .header__menu {
+            justify-self: end;
+            align-self: center;
+            width: 71%;
+        }
+
+        .header__menu a:nth-last-child(-n+2) {
+            margin-left: 24%;
+        }
+
+        header a {
+            color: #6D6D6D;
+        }
+
+        .main {
+            display: grid;
+            grid-area: 2/2/3/6;
+            grid-template-columns: repeat(4, 1fr);
+            margin-bottom: 3%;
+        }
+
+        .main__img {
+            width: 90%;
+        }
+
+        .footer {
+            display: grid;
+            grid-area: 3/2/4/6;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer__nav {
+            grid-column: 2/4;
+            justify-self: center;
+            width: 66%;
+        }
+
+        .footer__nav a:nth-last-child(-n+2) {
+            margin-left: 28%;
+        }
+
+        .footer__tel {
+            justify-self: end;
+            font-size: 18px;
+            color: #333333;
+        }
+
+        .header__menu,
+        .footer__info,
+        .footer__nav,
+        .footer__tel {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .header__menu,
+        .footer__info {
+        font-size: 16px;
+        }
+
+        footer span {
+            color: #CECECE;
+        }
+
+        footer .footer__nav a {
+            font-size: 14px;
+            color: #686868;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="header">
-        <img class="header__logo" src="assets/img/logo.svg" alt="promogroup" >
+    <div class="grid-container">
 
-        <nav class="header__menu">
-            <a href="#projects"> Проекты </a>
-            <a href="#about"> О компании </a>
-            <a href="#contacts"> Контакты </a>
-        </nav>
-    </header>
+        <header class="header">
+            <img class="header__logo" src="assets/img/logo.svg" alt="promogroup">
 
-    <main class="main">
-        <div class="main__section-1">
-            <img src="assets/img/design.svg" alt="design">
-        </div>
+            <nav class="header__menu">
+                <a href="#projects"> Проекты </a>
+                <a href="#about"> О компании </a>
+                <a href="#contacts"> Контакты </a>
+            </nav>
+        </header>
 
-        <div class="main__section-2">
-            <img src="assets/img/posm.svg" alt="posm">
-        </div>
+        <main class="main">
+            <div>
+                <img class="main__img" src="assets/img/design.svg" alt="design">
+            </div>
 
-        <div class="main__section-3">
-            <img src="assets/img/merch.svg" alt="merch">
-        </div>
+            <div>
+                <img class="main__img" src="assets/img/posm.svg" alt="posm">
+            </div>
 
-        <div class="main__section-4">
-            <img src="assets/img/event.svg" alt="event">
-        </div>
+            <div>
+                <img class="main__img" src="assets/img/merch.svg" alt="merch">
+            </div>
 
-    </main>
+            <div>
+                <img class="main__img" src="assets/img/event.svg" alt="event">
+            </div>
 
-    <footer class="footer">
-        <span class="footer__info">@promogroup 2008-2021</span>
+        </main>
 
-        <img class="footer__logo" src="assets/img/ecovadis.svg" alt="ecovadis">
+        <footer class="footer">
+            <div class="footer__info">
+                <span>@promogroup 2008-2021</span> <br />
+                <img src="assets/img/ecovadis.svg" alt="ecovadis">
+            </div>
 
-        <div class="footer__nav">
-            <a href="https://www.behance.net/">Behance</a>
-            <a href="https://instagram.com/">Instagram</a>
-            <a href="https://www.facebook.com/">Facebook</a>
-        </div>
+            <div class="footer__nav">
+                <a href="https://www.behance.net/">Behance</a>
+                <a href="https://instagram.com/">Instagram</a>
+                <a href="https://www.facebook.com/">Facebook</a>
+            </div>
 
-        <a class="footer__tel" href="tel: 88005006340">8 800 500 63 40</a>
+            <a class="footer__tel" href="tel:88005006340">8 800 500 63 40</a>
 
-
-    </footer>
+        </footer>
+    </div>
 </body>
+
 </html>
